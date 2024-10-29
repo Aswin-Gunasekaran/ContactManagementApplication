@@ -27,7 +27,7 @@ This project is developed using Angular and ASP.NET Core, to build a user-friend
 
 - **Custom Middleware**:
   - **Authorization Middleware**: Manages authorization and detailed error responses.
-  - **Global Expection Middleware**:  It handles unhandled exception and masks them with custom error message
+  - **Global Expection Middleware**:  It handles unhandled exception and masks them with custom and user friendly error message.
 
 ## Setup Instructions
 
