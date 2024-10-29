@@ -32,39 +32,70 @@ This project is developed using Angular and ASP.NET Core, to build a user-friend
 ## Setup Instructions
 
 ### Prerequisites
-Ensure the following are installed:
 
-- **Node.js** (version 16 or higher): Download from [nodejs.org](https://nodejs.org).
-- **npm**: Comes bundled with Node.js. Verify installation by running:
+Ensure you have the following installed:
+
+- **Node.js**: Version 16 or higher. You can download it from [nodejs.org](https://nodejs.org/).
+- **npm**: This comes bundled with Node.js. Verify your installation by running:
   ```bash
   node -v
   npm -v
-  ```
 
-### Installation
+**Installation**
 
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
-   ```
+**1.Clone the Repository:**
 
-2. **Set Up Angular Client**:
-   ```bash
-   cd clientApp
-   npm install
-   ```
+git clone <repository-url>
+cd <repository-folder>
 
-3. **Set Up ASP.NET Core API**:
-   - Navigate back to the root directory:
-     ```bash
-     cd ..
-     ```
-   - Restore dependencies:
-     ```bash
-     dotnet restore
-     ```
-   - Run the API application:
-     ```bash
-     dotnet run
-     ```
+**2.Set Up Angular Client:**
+
+Open:
+cd CMA.Web\ClientApp.
+
+Run
+npm install.
+
+**3.Set Up ASP.NET Core API:**
+
+- Navigate back to the root directory:
+
+- cd ..
+
+- Restore the dependencies:
+
+- dotnet restore
+
+- Navigate to API project:
+
+- cd ContactManagementApplication
+
+- Run the API application:
+
+- dotnet run
+
+**4. Add API base url to angular project config**
+
+- Get the base url of the API project and configure it in the  'environment.prod.ts' and 'environment.ts' file in the location 'CMA.Web\ClientApp\src\environments'
+
+- The base url config name is 'apiBaseUrl'
+
+**5. Run API Unit test project:**
+
+- Navigate to test project directory from root:
+
+- cd ContactManagementApplication.Test
+
+- Run the test project:
+
+- dotnet test
+
+**6. Run Angular test specs:**
+
+- Navigate to client app from root directory:
+
+- cd CMA.Web\ClientApp.
+
+- Run angular test specs:
+
+- ng test

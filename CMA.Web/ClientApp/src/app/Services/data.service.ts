@@ -3,6 +3,7 @@ import { Inject, Injectable } from '@angular/core';
 import { Observable, throwError as observableThrowError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { TokenService } from './token.service';
+import { environment } from '../../environments/environment.prod';
  
 
 @Injectable()
@@ -11,7 +12,7 @@ export abstract class DataService {
   
   } 
    
-   
+  private apiBaseUrl = environment.apiBaseUrl;
 
   httpHeaderWithSpecialData() {
     const token = this.tokenService.getAccessToken();
@@ -24,7 +25,7 @@ export abstract class DataService {
 
   get(name: string): Observable<any> { 
     const headers = this.httpHeaderWithSpecialData();
-    let getContactURL = "https://localhost:44374/" + "api/" + name;
+    let getContactURL = this.apiBaseUrl + "api/" + name;
     return this.http.get(getContactURL, { headers })
       .pipe(
         map((res: any) => {
@@ -49,7 +50,7 @@ export abstract class DataService {
       headers = this.httpHeaderWithSpecialData()
     }
      
-    let createContactURL = "https://localhost:44374/" + "api/" + name;
+    let createContactURL = this.apiBaseUrl + "api/" + name;
     return this.http.post(createContactURL, JSON.stringify(model), { headers })
       .pipe(
         map((res) => {
@@ -65,7 +66,7 @@ export abstract class DataService {
   put(name: string, model: any): Observable<any> { 
     const headers = this.httpHeaderWithSpecialData();
 
-    let updateContactURL = "https://localhost:44374/" + "api/" + name;
+    let updateContactURL = this.apiBaseUrl + "api/" + name;
     return this.http.put(updateContactURL, JSON.stringify(model), { headers })
       .pipe(
         map((res) => {
@@ -83,7 +84,7 @@ export abstract class DataService {
       'Content-Type': 'application/json'  // Specify JSON content type
     });
 
-    let deleteContactUrl = "https://localhost:44374/" + "api/" + name;
+    let deleteContactUrl = this.apiBaseUrl + "api/" + name;
     return this.http.delete(deleteContactUrl, { headers })
       .pipe(
         map((res) => {

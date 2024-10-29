@@ -1,41 +1,38 @@
 # Project README
 
 ## Overview
-
-This project includes components that are built in Angular, ASP.NET Core. The main focus include a interface for managing contacts supported with authorization for secure access along with exception handling and logging
+This project is developed using Angular and ASP.NET Core, to build a user-friendly interface for managing contacts. Custom middleware is implemented for ensuring secure authorization and error handling
 
 ## Technologies Used
-
-- **Angular**: For building dynamic web applications.
-- **ASP.NET Core**: For creating a RESTful API.
-- **JSON**: For storing contacts in a file.
-- **Dependency Injection**: Utilized for logging and service management.
-- **Detailed Logging**: Logs request details, errors, and unauthorized access attempts for better debugging and monitoring.
+- **Angular**: For building web applications.
+- **ASP.NET Core**: Used for creating a RESTful API to manage contacts.
+- **JSON**: To store contact data.
+- **Dependency Injection**: Applied for managing logging and services.
+- **Detailed Logging**: Logs requests, errors, and unauthorized access attempts to aid debugging and monitoring.
 
 ## Features
 
 ### Angular Application
-
 - **Contact Management**:
-  - Provision for creating, editing and Deleting contacts.
+  - Modals for creating,editing and deleting contacts.
 
 ### ASP.NET Core API for Contact Management
+- **Endpoints**:
+  - `GET /Contact/GetContacts`: Retrieves all contacts.
+  - `GET /Contact/GetContactById`: Retrieves a specific contact by ID.
+  - `POST /Contact/AddContact`: Adds a new contact.
+  - `PUT /Contact/UpdateContact`: Updates an existing contact.
+  - `DELETE /Contact/DeleteContact`: Deletes a contact by ID.
 
-- **Contact Management Endpoints**:
-  - **GET /Contact/GetContacts**: Retrieves a list of all contacts.
-  - **GET /Contact/GetContactById**: Retrieves a specific contact by ID.
-  - **POST /Contact/AddContact**: Adds a new contact to the list.
-  - **PUT /Contact/UpdateContact**: Updates an existing contact's details.
-  - **DELETE /Contact/DeleteContact**: Deletes a contact by ID.
-
-- **Custom Error Handling Middleware**:
-  - **CookieAuthMiddleware**: Custom middleware that handles authorization token processing and provides detailed error responses.
+- **Custom Middleware**:
+  - **Authorization Middleware**: Manages authorization and detailed error responses.
+  - **Global Expection Middleware**:  It handles unhandled exception and masks them with custom and user friendly error message.
 
 ## Setup Instructions
 
 ### Prerequisites
 
-Before you begin, ensure you have the following installed:
+Ensure you have the following installed:
 
 - **Node.js**: Version 16 or higher. You can download it from [nodejs.org](https://nodejs.org/).
 - **npm**: This comes bundled with Node.js. Verify your installation by running:
@@ -76,7 +73,13 @@ npm install.
 
 - dotnet run
 
-**4. Run API Unit test project:**
+**4. Add API base url to angular project config**
+
+- Get the base url of the API project and configure it in the  'environment.prod.ts' and 'environment.ts' file in the location 'CMA.Web\ClientApp\src\environments'
+
+- The base url config name is 'apiBaseUrl'
+
+**5. Run API Unit test project:**
 
 - Navigate to test project directory from root:
 
@@ -86,7 +89,7 @@ npm install.
 
 - dotnet test
 
-**5. Run Angular test specs:**
+**6. Run Angular test specs:**
 
 - Navigate to client app from root directory:
 
