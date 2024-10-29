@@ -18,6 +18,7 @@ export class CreateContactComponent implements OnInit {
   @Output() closeClick = new EventEmitter();
   @ViewChild('contactModal', { static: true }) contactModal!: ModalDirective;
   submitted = false; // New flag to track form submission
+  errorMessage: string = "";
   constructor(private formBuilder: FormBuilder,
     private readonly contactService: ContactService) {
     this.contactForm = this.formBuilder.group({
@@ -63,8 +64,11 @@ export class CreateContactComponent implements OnInit {
       ? this.contactService.UpdateContact(contactDto)
       : this.contactService.createContact(contactDto);
 
-    saveObservable.subscribe(() => {
-      this.handleSaveSuccess();
+    saveObservable.subscribe({
+      next: () => this.handleSaveSuccess(),
+      error: (err) => {
+        this.errorMessage = 'An error occurred while saving the contact.';
+      }
     });
   }
 
@@ -110,7 +114,4 @@ export class CreateContactComponent implements OnInit {
       }
     }
   }
-
-  
-
 }

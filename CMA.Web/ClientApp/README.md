@@ -53,14 +53,14 @@ cd <repository-folder>
 **2.Set Up Angular Client:**
 
 Open:
-cd clientApp.
+cd CMA.Web\ClientApp.
 
 Run
 npm install.
 
 **3.Set Up ASP.NET Core API:**
 
- - Navigate back to the root directory:
+- Navigate back to the root directory:
 
 - cd ..
 
@@ -68,10 +68,30 @@ npm install.
 
 - dotnet restore
 
--  Run the API application:
+- Navigate to API project:
+
+- cd ContactManagementApplication
+
+- Run the API application:
 
 - dotnet run
 
+**4. Run API Unit test project:**
 
+- Navigate to test project directory from root:
 
+- cd ContactManagementApplication.Test
 
+- Run the test project:
+
+- dotnet test
+
+**5. Run Angular test specs:**
+
+- Navigate to client app from root directory:
+
+- cd CMA.Web\ClientApp.
+
+- Run angular test specs:
+
+- ng test
