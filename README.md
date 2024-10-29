@@ -2,12 +2,12 @@
 # Project README
 
 ## Overview
-This project demonstrates expertise in Angular and ASP.NET Core, featuring a user-friendly interface for managing contacts. It includes custom middleware to handle authorization and error management, ensuring secure access and robust error handling.
+This project is developed using Angular and ASP.NET Core, to build a user-friendly interface for managing contacts. Custom middleware is implemented for ensuring secure authorization and error handling
 
 ## Technologies Used
-- **Angular**: For building dynamic web applications with optimized code.
+- **Angular**: For building web applications.
 - **ASP.NET Core**: Used for creating a RESTful API to manage contacts.
-- **JSON**: Contact data is stored in a JSON file.
+- **JSON**: To store contact data.
 - **Dependency Injection**: Applied for managing logging and services.
 - **Detailed Logging**: Logs requests, errors, and unauthorized access attempts to aid debugging and monitoring.
 
@@ -15,9 +15,7 @@ This project demonstrates expertise in Angular and ASP.NET Core, featuring a use
 
 ### Angular Application
 - **Contact Management**:
-  - Modals for creating and editing contacts.
-  - Confirmation modals for contact deletion.
-  - Efficient data processing through optimized filtering and observables.
+  - Modals for creating,editing and deleting contacts.
 
 ### ASP.NET Core API for Contact Management
 - **Endpoints**:
@@ -28,8 +26,8 @@ This project demonstrates expertise in Angular and ASP.NET Core, featuring a use
   - `DELETE /Contact/DeleteContact`: Deletes a contact by ID.
 
 - **Custom Middleware**:
-  - **Authorization Middleware**: Manages authorization tokens and provides detailed error responses (404, 401, 500).
-  - **Global Expection Middleware**:  It intercepts unhandled exceptions that occur during the processing of HTTP requests, allowing you to log the error, format a response, and potentially redirect the user or provide a user-friendly error message.
+  - **Authorization Middleware**: Manages authorization and detailed error responses.
+  - **Global Expection Middleware**:  It handles unhandled exception and masks them with custom error message
 
 ## Setup Instructions
 
