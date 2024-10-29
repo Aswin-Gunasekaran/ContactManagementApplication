@@ -41,7 +41,7 @@
 
 <div class="pagination">
   <button class="btn btn-secondary btn-sm" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
-  <span>Page {{ currentPage }} of {{ totalContacts / pageSize | number: '1.0-0' }}</span>
+  <span>Page {{ currentPage }} of {{ totalContacts / pageSize + 1| number: '1.0-0' }}</span>
   <button class="btn btn-secondary btn-sm" (click)="nextPage()" [disabled]="currentPage * pageSize >= totalContacts">Next</button>
 </div>
 
