@@ -1,0 +1,14 @@
+[
+  {
+    "ContactId": 3,
+    "Email": "Bruce@yopmail.com",
+    "FirstName": "Bruce",
+    "LastName": "Wayne"
+  },
+  {
+    "ContactId": 4,
+    "Email": "testuser@yopmail.com",
+    "FirstName": "Test",
+    "LastName": "User"
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "ContainingType": "ContactManagementApplication.API.Controllers.ContactController",
+    "Method": "AddContact",
+    "RelativePath": "api/Contact/AddContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newContact",
+        "Type": "ContactManagementApplication.API.Models.ContactDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactManagementApplication.API.Controllers.ContactController",
+    "Method": "DeleteContact",
+    "RelativePath": "api/Contact/DeleteContact",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactManagementApplication.API.Controllers.ContactController",
+    "Method": "GetContactById",
+    "RelativePath": "api/Contact/GetContactById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contactId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactManagementApplication.API.Controllers.ContactController",
+    "Method": "GetContacts",
+    "RelativePath": "api/Contact/GetContacts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactManagementApplication.API.Controllers.ContactController",
+    "Method": "UpdateContact",
+    "RelativePath": "api/Contact/UpdateContact",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatedContact",
+        "Type": "ContactManagementApplication.API.Models.ContactDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactManagementApplication.API.Controllers.ContactController",
+    "Method": "ValidateUserAndGetToken",
+    "RelativePath": "api/Contact/ValidateUserAndGetToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCredential",
+        "Type": "ContactManagementApplication.API.Models.UserInfo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

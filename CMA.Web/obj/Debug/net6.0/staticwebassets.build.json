@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "ic6B0pxOrfraDy0cf9uuH8LYBrnwYRRT+U4DSqCQ27w=",
+  "Source": "ContactManagementApplication.Web",
+  "BasePath": "_content/ContactManagementApplication.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ContactManagementApplication.Web\\wwwroot",
+      "Source": "ContactManagementApplication.Web",
+      "ContentRoot": "D:\\repos\\ContactManagementApplication\\ContactManagementApplication\\CMA.Web\\wwwroot\\",
+      "BasePath": "_content/ContactManagementApplication.Web",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\repos\\ContactManagementApplication\\ContactManagementApplication\\CMA.Web\\wwwroot\\favicon.ico",
+      "SourceId": "ContactManagementApplication.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repos\\ContactManagementApplication\\ContactManagementApplication\\CMA.Web\\wwwroot\\",
+      "BasePath": "_content/ContactManagementApplication.Web",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ]
+}

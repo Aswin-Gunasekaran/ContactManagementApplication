@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "",
+"RedirectUrl": "",
+"LaunchCommand": "",
+"WorkingDirectory": "D:\\repos\\ContactManagementApplication\\ContactManagementApplication\\ContactManagementApplication",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
