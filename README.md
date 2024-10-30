@@ -75,6 +75,8 @@ npm install.
 
 - dotnet run
 
+- To access the swagger UI, hit the URL -> <APIBaseUrl>/swagger/index.html
+
 **4. Add API base url to angular project config**
 
 - Get the base url of the API project and configure it in the  'environment.prod.ts' and 'environment.ts' file in the location 'CMA.Web\ClientApp\src\environments'
