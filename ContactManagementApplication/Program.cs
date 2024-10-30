@@ -67,7 +67,6 @@ app.UseMiddleware<GlobalExceptionMiddleware>();
 app.UseMiddleware<AuthorizationHeaderMiddleware>();
 
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
