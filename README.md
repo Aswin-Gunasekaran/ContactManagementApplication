@@ -40,6 +40,7 @@ Ensure you have the following installed:
   ```bash
   node -v
   npm -v
+- DotNet 8.0
 
 **Installation**
 
